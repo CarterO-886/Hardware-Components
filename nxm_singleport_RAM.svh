@@ -23,7 +23,7 @@ module  nxm_singleport_RAM(
 
 logic data[DEPTH-1:0]; // RAM storage array
 
-always_ff @(posedge rst) begin
+always_ff @(posedge rst) begin 
     if (rst) begin
         for (int i = 0; i < DEPTH; i++) begin
             data[i] <= '0; // Initialize all memory locations to zero on reset
